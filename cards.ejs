@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA</title>
+</head>
+<body>
+    <div class="container">
+        <% if (hero) { %>
+        <h1><%= hero.name %></h1>
+        <img src="<%= hero.image %>" alt="<%= hero.name %>">
+        <p><b>Biography:</b> <%= hero.biography %></p>
+        <p><b>Powerstats:</b></p>
+        <ul>
+        <li>Intelligence: <%= hero.power1 %></li>
+        <li>Strength: <%= hero.power2 %></li>
+        <li>Speed: <%= hero.power3 %></li>
+        <li>Durability: <%= hero.power4 %></li>
+        <li>Power: <%= hero.power5 %></li>
+        <li>Combat: <%= hero.power6 %></li>
+        </ul>
+        <p><b>Birth:</b> <%= hero.birth %></p>
+        <p><b>First Appearance:</b> <%= hero.first %></p>
+        <p><b>Aliases:</b> <%= hero.aliases %></p>
+        <p><b>Gender:</b> <%= hero.gender %></p>
+        <p><b>Race:</b> <%= hero.race %></p>
+        <p><b>Height:</b> <%= hero.height %></p>
+        <p><b>Weight:</b> <%= hero.weight %></p>
+        <p><b>Eye Color:</b> <%= hero.eyeColor %></p>
+        <p><b>Hair Color:</b> <%= hero.hairColor %></p>
+        <p><b>Affiliation:</b> <%= hero.affiliation %></p>
+
+            <button onclick="window.location.href='/cards?id=<%= idprev %>'">Go Back</button>
+            <button onclick="window.location.href='/cards?id=<%= idpost %>'">Go Forward</button>
+            <button onclick="window.location.href='/index'">Go to Index</button>
+          <% } %>
+        
+      </div>
+
+<style>
+    .container {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #add8e6;
+}
+
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+p {
+  margin-top: 10px;
+}
+</style>
+      
+
+
+</body>
+</html>
